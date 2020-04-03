@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Rayshifts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Post</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rayshifts.each do |rayshift| %>
+      <tr>
+        <td><%= rayshift.post %></td>
+        <td><%= link_to 'Show', rayshift %></td>
+        <td><%= link_to 'Edit', edit_rayshift_path(rayshift) %></td>
+        <td><%= link_to 'Destroy', rayshift, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rayshift', new_rayshift_path %>
