@@ -11,7 +11,7 @@
     </article>
 </div>
 
-<% @rayshifts.each do | rayshift | %>
+<% @rayshifts.each do | post | %>
     <div class="box">
         <article class="media">
             <div class="media-left">
@@ -23,7 +23,7 @@
                 <div class="content">
                     <strong>Gilgamesh</strong><br />
                     <small>@gilgamesh</small><br />
-                    
+                    <p><%= post.post %></p>
                 </div>
             </div>
         </article>
