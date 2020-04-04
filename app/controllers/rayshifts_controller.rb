@@ -4,7 +4,7 @@ class RayshiftsController < ApplicationController
   # GET /rayshifts
   # GET /rayshifts.json
   def index
-    @rayshifts = Rayshift.all
+    @rayshifts = Rayshift.all.order("created_at DESC")
   end
 
   # GET /rayshifts/1
