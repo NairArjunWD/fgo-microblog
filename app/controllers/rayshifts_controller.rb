@@ -29,7 +29,7 @@ class RayshiftsController < ApplicationController
 
     respond_to do |format|
       if @rayshift.save
-        format.html { redirect_to @rayshift, notice: 'Rayshift was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Rayshift was successfully created.' }
         format.json { render :show, status: :created, location: @rayshift }
       else
         format.html { render :new }
