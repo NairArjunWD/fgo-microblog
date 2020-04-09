@@ -16,7 +16,7 @@ class RayshiftsController < ApplicationController
 
   # GET /rayshifts/new
   def new
-    @rayshift = Rayshift.new
+    @rayshift = current_user.rayshifts.build
   end
 
   # GET /rayshifts/1/edit
@@ -26,7 +26,7 @@ class RayshiftsController < ApplicationController
   # POST /rayshifts
   # POST /rayshifts.json
   def create
-    @rayshift = Rayshift.new(rayshift_params)
+    @rayshift = current_user.rayshifts.build(rayshift_params)
 
     respond_to do |format|
       if @rayshift.save
