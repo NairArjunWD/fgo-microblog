@@ -1,5 +1,6 @@
 class RayshiftsController < ApplicationController
   before_action :set_rayshift, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /rayshifts
   # GET /rayshifts.json
@@ -15,7 +16,7 @@ class RayshiftsController < ApplicationController
 
   # GET /rayshifts/new
   def new
-    @rayshift = Rayshift.new
+    @rayshift = current_user.rayshifts.build
   end
 
   # GET /rayshifts/1/edit
@@ -25,11 +26,11 @@ class RayshiftsController < ApplicationController
   # POST /rayshifts
   # POST /rayshifts.json
   def create
-    @rayshift = Rayshift.new(rayshift_params)
+    @rayshift = current_user.rayshifts.build(rayshift_params)
 
     respond_to do |format|
       if @rayshift.save
-        format.html { redirect_to @rayshift, notice: 'Rayshift was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Rayshift was successfully created.' }
         format.json { render :show, status: :created, location: @rayshift }
       else
         format.html { render :new }
