@@ -25,6 +25,7 @@
                     <small><%= post.user.username %></small><br />
                     <p><%= post.post %></p>
                 </div>
+                <% if user_signed_in? %>
                 <nav class="level">
                     <div class="level-left is-mobile">
                         <%= link_to post, class: "level-item" do %>
@@ -44,6 +45,7 @@
                         <% end %>
                     </div>
                 </nav>
+                <% end %>
             </div>
         </article>
     </div>
