@@ -1,4 +1,5 @@
 <div class="column is-half">
+    <% if user_signed_in? %>
     <article class="media box">
         <figure class="media-left">
             <p class="image is-64x64">
@@ -9,6 +10,7 @@
             <%= render 'rayshifts/form' %>
         </div>
     </article>
+    <% end %>
 
 
 <% @rayshifts.each do | post | %>
