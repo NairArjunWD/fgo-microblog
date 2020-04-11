@@ -19,8 +19,14 @@
 
  body {
      font-family: 'Merriweather', serif;
+     background-color: #066ff0;
+     min-height: 100vh;
+     color: white;
  }
 
+ .navbar{
+     background-color: #0073ff;
+ }
  .navbar-brand .title {
      color: white;
  }
