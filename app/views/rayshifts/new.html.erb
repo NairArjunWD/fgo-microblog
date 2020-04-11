@@ -1,5 +1,22 @@
-<h1>New Rayshift</h1>
+<div class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <h1 class="title">Create a Post</h1>
+                <%= render 'form', rayshift: @rayshift %>
+            </div>
+        </div>
+    </div>
+</div>
 
-<%= render 'form', rayshift: @rayshift %>
-
-<%= link_to 'Back', rayshifts_path %>
+<nav class="navbar is-fixed-bottom">
+    <div class="navbar-menu">
+        <div class="navbar-item">
+            <div class="field is-grouped">
+                <p class="control">
+                    <%= link_to 'Back', rayshifts_path, class: 'button is-dark' %>
+                </p>
+            </div>
+        </div>
+    </div>
+</nav>
