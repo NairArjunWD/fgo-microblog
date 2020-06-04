@@ -19,7 +19,7 @@
 
  body {
      font-family: 'Merriweather', serif;
-     background-color: #066ff0;
+     background-color: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 9%, rgba(6,111,240,1) 100%);;
      min-height: 100vh;
      color: white;
  }
@@ -30,6 +30,10 @@
  .navbar-brand .title {
      color: white;
  }
+
+//  .section {
+//      background: linear-gradient(0deg, rgba(17,17,24,0.80015756302521) 9%, rgba(26,30,36,1) 100%);
+//  }
 
  // round images
  .image {
