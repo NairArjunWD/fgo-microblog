@@ -10,5 +10,6 @@ It has a main feed where everyone's post is displayed and is shown to everyone. 
  - CRUD posts only work with person who signed and made that post
 
 ### To do (future updates):
- - switch to pg instead of sqlite
+ - Switch to pg instead of sqlite
  - Host on heroku
+ - Update dependencies
